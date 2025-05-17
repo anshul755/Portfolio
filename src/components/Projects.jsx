@@ -7,7 +7,7 @@ export default function Projects() {
     {
       name: "NeuralAgri",
       logo: "https://www.dropbox.com/scl/fi/xlgyo976tdn8ion9gn21y/NA.png?rlkey=crwk9x8ud0fh2shvm1le7otmn&st=o7z0x4u1&raw=1",
-      domain: "Full Stack",
+      domain: "Full Stack + AI/ML + Android Development",
       date: "March 2025",
       summary: "AI-Powered Agricultural Advisory System",
       description:
