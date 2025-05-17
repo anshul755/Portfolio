@@ -1,12 +1,72 @@
-# React + Vite
+# 🚀 Anshul Patel's Developer Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to my personal portfolio website — built with **React** and **Tailwind CSS**!  
+🌍 Live here: [Anshul Patel](https://anshulpatel.vercel.app)
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🧑‍💻 Features
 
-## Expanding the ESLint configuration
+- 🌐 Fully responsive design
+- 💬 Contact form with real-time email submission via EmailJS
+- 🔗 Integrated social and competitive programming profiles
+- 🎨 Stylish UI built using Tailwind CSS
+- ⚡ Smooth animations and user-friendly layout
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## ✉️ Contact Form Configuration
+
+This project uses [EmailJS](https://www.emailjs.com/) to send emails directly from the frontend.
+
+To configure:
+
+1. Go to [emailjs.com](https://www.emailjs.com/)
+2. Create a new service and email template
+3. Add your Public Key in your EmailJS dashboard
+4. Replace the following in `Contact.jsx`:
+
+```js
+emailjs.sendForm(
+  'YOUR_SERVICE_ID',
+  'YOUR_TEMPLATE_ID',
+  formRef.current,
+  'YOUR_PUBLIC_KEY'
+)
+```
+
+---
+
+## 🔗 Social & CP Profiles
+
+- [GitHub](https://github.com/anshul755)
+- [LinkedIn](https://www.linkedin.com/in/anshul-patel-2b7241313/)
+- [LeetCode](https://leetcode.com/anshul755)
+- [Codeforces](https://codeforces.com/profile/anshul755)
+
+---
+
+## 🛠️ Built With
+
+- ⚛️ React
+- 🎨 Tailwind CSS
+- ✉️ EmailJS
+- 🧱 Lucide React Icons
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js v14+
+- npm or yarn
+
+### Installation
+
+```bash
+git clone https://github.com/anshul755/portfolio.git
+cd portfolio
+npm install
+npm run dev
+```
