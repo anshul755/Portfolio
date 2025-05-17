@@ -1,4 +1,4 @@
-# 🚀 Anshul Patel's Developer Portfolio
+# 🚀 My Portfolio
 
 Welcome to my personal portfolio website — built with **React** and **Tailwind CSS**!  
 🌍 Live here: [Anshul Patel](https://anshulpatel.vercel.app)
