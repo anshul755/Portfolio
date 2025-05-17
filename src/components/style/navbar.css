@@ -1,0 +1,53 @@
+:root {
+  --lc-orange: #FFA116;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  padding: 0 2rem;
+  z-index: 10;              /* above the canvas */
+  background: transparent;   /* let your screenshot show through */
+}
+
+.navbar__menu {
+  display: flex;
+  list-style: none;
+  margin-left: auto;        /* push to right */
+}
+
+.navbar__item {
+  margin: 0 1rem;
+  position: relative;
+}
+
+.navbar__link {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5rem 0;
+  transition: color 0.2s;
+}
+
+.navbar__link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 0;
+  background: var(--lc-orange);
+  transition: width 0.3s;
+}
+
+.navbar__link:hover {
+  color: var(--lc-orange);
+}
+
+.navbar__link:hover::after {
+  width: 100%;
+}
