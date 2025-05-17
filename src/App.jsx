@@ -19,7 +19,6 @@ export default function App() {
       flakeCount={flakeCount}
       windIntensity={windIntensity}
       flakeColor="#ffa116"
-      backgroundImage="/images/your-dark-bg.png"
     >
       <Navbar />
       <Home />
