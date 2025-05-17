@@ -57,7 +57,7 @@ export default function About() {
               <li><span className="font-medium">Languages:</span> JavaScript, Python, Java</li>
               <li><span className="font-medium">Frameworks:</span> React, Flask, Node.js</li>
               <li><span className="font-medium">AI/ML:</span> TensorFlow, PyTorch, OpenCV, MediaPipe</li>
-              <li><span className="font-medium">Tools:</span> GitHub, Docker, AWS</li>
+              <li><span className="font-medium">Tools:</span> GitHub</li>
             </ul>
           </div>
 
