@@ -2,7 +2,7 @@ import React, { useRef, useEffect, useState } from 'react';
 
 export default function FireBackground({
   flakeCount      = 150,
-  windIntensity   = 1.5,
+  windIntensity   = 0.5,
   flakeColor      = '#ffa116',
   backgroundImage = '/images/bg.png',
   tintColor       = '#000000',
