@@ -71,7 +71,6 @@ export default function About() {
             </a>
             <a
               href="/https://drive.google.com/file/d/1YXQmulFIYGmF0tPtMGPSxbuLbxp-PsbY/view?usp=drive_link"
-              download
               className="inline-flex items-center justify-center px-6 py-2 bg-transparent border border-orange-400 text-orange-400 hover:bg-orange-500 hover:text-black font-medium rounded-lg shadow-md transition w-full sm:w-auto"
             >
               <Download className="w-5 h-5 mr-2" />
