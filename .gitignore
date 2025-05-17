@@ -12,7 +12,6 @@ dist
 dist-ssr
 *.local
 Anshul_Patel.pdf
-.gitignore
 
 # Editor directories and files
 .vscode/*
