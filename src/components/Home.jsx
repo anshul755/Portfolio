@@ -106,7 +106,7 @@ export default function Home() {
         <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
           <a
             href="#project"
-            className="px-8 py-3 bg-orange-500 text-black font-semibold rounded-xl shadow-lg hover:bg-orange-600 hover:text-white transition"
+            className="px-8 py-3 bg-orange-400 text-black font-semibold rounded-xl shadow-lg hover:bg-orange-500 hover:text-white transition"
           >
             View Projects
           </a>
