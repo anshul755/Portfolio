@@ -22,7 +22,7 @@ export default function Education() {
   // images to rotate
   const images = [
     "https://nirmawebsite.s3.ap-south-1.amazonaws.com/wp-content/uploads/2022/04/DSC_1325-scaled.jpg",
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_gw2yZQ_py5oQC6t5F3g46kunxAGA9kgcRw&s"
+    "https://nirmawebsite.s3.ap-south-1.amazonaws.com/wp-content/uploads/sites/22/2022/01/IMG_20200211_181018__02-1.jpg"
   ];
   const [current, setCurrent] = useState(0);
 
