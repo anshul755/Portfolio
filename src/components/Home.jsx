@@ -122,7 +122,12 @@ export default function Home() {
 
       {/* Scroll Down Icon */}
       <div className="absolute bottom-10 animate-bounce text-orange-400 z-10">
-        <ChevronDown className="w-8 h-8" />
+        <a
+          href={"#education"}
+          className="text-orange text-lg font-medium hover:text-white transition-colors"
+        >
+          <ChevronDown className="w-8 h-8" />
+        </a>
       </div>
     </section>
   );

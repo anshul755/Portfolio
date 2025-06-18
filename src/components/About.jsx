@@ -70,7 +70,7 @@ export default function About() {
               Open to Opportunities
             </a>
             <a
-              href="https://drive.google.com/file/d/1YXQmulFIYGmF0tPtMGPSxbuLbxp-PsbY/view?usp=drive_link"
+              href="https://drive.google.com/file/d/1Kd8J6BW5g3ra7rpW9oyBIFEWF2QFUMy_/view?usp=drive_link"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center px-6 py-2 bg-transparent border border-orange-400 text-orange-400 hover:bg-orange-500 hover:text-black font-medium rounded-lg shadow-md transition w-full sm:w-auto"

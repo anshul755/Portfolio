@@ -19,14 +19,12 @@ function useReveal(threshold = 0.2) {
 export default function Education() {
   const [ref, revealed] = useReveal();
 
-  // images to rotate
   const images = [
     "https://nirmawebsite.s3.ap-south-1.amazonaws.com/wp-content/uploads/2022/04/DSC_1325-scaled.jpg",
     "https://nirmawebsite.s3.ap-south-1.amazonaws.com/wp-content/uploads/sites/22/2022/01/IMG_20200211_181018__02-1.jpg"
   ];
   const [current, setCurrent] = useState(0);
 
-  // rotate every 7 seconds
   useEffect(() => {
     const iv = setInterval(() => setCurrent(i => (i + 1) % images.length), 7000);
     return () => clearInterval(iv);
@@ -42,7 +40,6 @@ export default function Education() {
     >
       <div className="w-full max-w-7xl bg-black/30 backdrop-blur-md border border-white/20 rounded-3xl shadow-2xl overflow-hidden md:flex transform transition-transform duration-300 hover:scale-105">
         
-        {/* Left: rotating images */}
         <div className="relative w-full md:w-1/2 h-96 lg:h-[32rem]">
           {images.map((src, idx) => (
             <img
@@ -66,17 +63,17 @@ export default function Education() {
           </p>
           <div className="flex flex-wrap gap-8 text-base text-gray-300 mb-8">
             <span>
-              <span className="font-medium">CGPA:</span> 8.50
+              <span className="font-medium">CGPA:</span> 8.46
             </span>
             <span>
-              <span className="font-medium">Since:</span> January 2025
+              <span className="font-medium">Since:</span> May 2025
             </span>
             <span>
-              <span className="font-medium">Current Semester:</span> 4
+              <span className="font-medium">Current Semester:</span> 5
             </span>
           </div>
           <p className="text-gray-100 leading-relaxed">
-            Currently in my 4th semester of Computer Science Engineering, focusing on AI,
+            Currently in my 5th semester of Computer Science Engineering, focusing on AI,
             Machine Learning, and Software Development. I actively participate in hackathons,
             tech workshops, and open-source contributions to grow my skillset.
           </p>
