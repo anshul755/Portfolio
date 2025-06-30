@@ -1,4 +1,3 @@
-
 import { useState, useEffect, useRef } from "react"
 
 export default function Navbar() {
@@ -20,6 +19,7 @@ export default function Navbar() {
 
   const toggleMobileMenu = () => setMobileMenuOpen((prev) => !prev)
 
+  // Close mobile menu on outside click
   useEffect(() => {
     const handleClickOutside = (e) => {
       if (
@@ -35,12 +35,14 @@ export default function Navbar() {
     return () => document.removeEventListener("mousedown", handleClickOutside)
   }, [])
 
+  // Navbar background on scroll
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 10)
     window.addEventListener("scroll", onScroll)
     return () => window.removeEventListener("scroll", onScroll)
   }, [])
 
+  // Update hash on URL change (clicks)
   useEffect(() => {
     const handleHashChange = () => {
       setActiveHash(window.location.hash || '#home')
@@ -48,6 +50,33 @@ export default function Navbar() {
     window.addEventListener('hashchange', handleHashChange)
     return () => window.removeEventListener('hashchange', handleHashChange)
   }, [])
+
+  // Scroll spy: update activeHash based on scroll position
+  useEffect(() => {
+    const sections = menuItems.map(item => document.querySelector(item.to))
+    const observerOptions = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.6, // 60% of section visible
+    }
+
+    const observerCallback = (entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          setActiveHash(`#${entry.target.id}`)
+          // Update URL hash without scrolling
+          window.history.replaceState(null, '', `#${entry.target.id}`)
+        }
+      })
+    }
+
+    const observer = new IntersectionObserver(observerCallback, observerOptions)
+    sections.forEach(sec => sec && observer.observe(sec))
+
+    return () => {
+      sections.forEach(sec => sec && observer.unobserve(sec))
+    }
+  }, [menuItems])
 
   return (
     <nav
@@ -60,7 +89,7 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center flex-shrink-0">
             <a
-              href="#"
+              href="#home"
               className="text-white text-xl lg:text-2xl font-semibold tracking-wide hover:text-orange-400 transition-colors duration-300"
             >
               Anshul Patel
