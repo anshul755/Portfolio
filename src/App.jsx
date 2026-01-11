@@ -8,6 +8,7 @@ import Contact from './components/Contact';
 import Experience from './components/Experience';
 import Education from './components/Education';
 import Home from './components/Home';
+import PortfolioChatbot from './components/PortfolioChatBot';
 
 export default function App() {
   const [flakeCount, setFlakeCount]       = useState(200);
@@ -28,6 +29,7 @@ export default function App() {
       <Projects />
       <About />
       <Contact />
+      <PortfolioChatbot />
     </SnowBackground>
     </div>
   );
