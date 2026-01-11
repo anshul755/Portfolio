@@ -27,7 +27,8 @@ const pinecone = new Pinecone({ apiKey: PINECONE_API_KEY });
 app.use(cors());
 app.use(express.json({ strict: false }));
 app.use(express.urlencoded({ extended: true }));
-const upload = multer({ dest: 'uploads/' });
+
+const upload = multer({ dest: '/tmp/' });
 
 async function extractText(filePath, mimeType) {
     const buffer = await fs.readFile(filePath);
@@ -213,4 +214,8 @@ function startServer(port) {
     });
 }
 
-startServer(PORT);
+module.exports = app;
+
+if (require.main === module) {
+    startServer(PORT);
+}
