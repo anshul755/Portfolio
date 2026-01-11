@@ -1,6 +1,5 @@
 import React, { useRef, useState, useEffect } from "react";
 
-// scroll‐reveal hook
 function useReveal(threshold = 0.2) {
   const ref = useRef(null);
   const [revealed, setRevealed] = useState(false);
@@ -24,9 +23,8 @@ export default function Experience() {
     <section
       id="experience"
       ref={ref}
-      className={`w-full flex justify-center px-6 py-32 transition-all duration-700 ease-out ${
-        revealed ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-      }`}
+      className={`scroll-mt-20 w-full flex justify-center px-6 py-32 transition-all duration-700 ease-out ${revealed ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+        }`}
     >
       <div className="w-full max-w-6xl bg-black/30 backdrop-blur-md rounded-2xl p-12 md:p-16 shadow-2xl border border-white/20 text-white">
         <h2 className="text-4xl md:text-5xl font-extrabold text-orange-400 mb-6">

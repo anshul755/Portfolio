@@ -34,26 +34,23 @@ export default function Education() {
     <section
       id="education"
       ref={ref}
-      className={`w-full flex justify-center px-4 py-32 transition-all duration-700 ease-out ${
-        revealed ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-      }`}
+      className={`scroll-mt-20 w-full flex justify-center px-4 py-32 transition-all duration-700 ease-out ${revealed ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+        }`}
     >
       <div className="w-full max-w-7xl bg-black/30 backdrop-blur-md border border-white/20 rounded-3xl shadow-2xl overflow-hidden md:flex transform transition-transform duration-300 hover:scale-105">
-        
+
         <div className="relative w-full md:w-1/2 h-96 lg:h-[32rem]">
           {images.map((src, idx) => (
             <img
               key={idx}
               src={src}
               alt={`Semester ${idx + 1}`}
-              className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out ${
-                idx === current ? "opacity-100" : "opacity-0"
-              }`}
+              className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out ${idx === current ? "opacity-100" : "opacity-0"
+                }`}
             />
           ))}
         </div>
 
-        {/* Right: text info */}
         <div className="flex-1 p-8 md:p-12 lg:p-16">
           <h2 className="text-3xl lg:text-4xl font-extrabold text-orange-400 mb-4">
             Computer Science Engineering
@@ -63,19 +60,17 @@ export default function Education() {
           </p>
           <div className="flex flex-wrap gap-8 text-base text-gray-300 mb-8">
             <span>
-              <span className="font-medium">CGPA:</span> 8.46
+              <span className="font-medium">CGPA:</span> 8.59
             </span>
             <span>
-              <span className="font-medium">Since:</span> May 2025
+              <span className="font-medium">Since:</span> December 2025
             </span>
             <span>
-              <span className="font-medium">Current Semester:</span> 5
+              <span className="font-medium">Current Semester:</span> 6
             </span>
           </div>
           <p className="text-gray-100 leading-relaxed">
-            Currently in my 5th semester of Computer Science Engineering, focusing on AI,
-            Machine Learning, and Software Development. I actively participate in hackathons,
-            tech workshops, and open-source contributions to grow my skillset.
+            Pursuing Computer Science Engineering with a strong focus on Software Engineering, currently learning backend development using Spring Boot and exploring Generative AI technologies. I’m deeply interested in software design and architecture, and I’m committed to understanding what it truly takes to evolve into a skilled software engineer. Through hackathons, tech workshops, and open-source contributions, I continuously learn, collaborate, and refine my problem-solving abilities to move closer to that goal.
           </p>
         </div>
       </div>

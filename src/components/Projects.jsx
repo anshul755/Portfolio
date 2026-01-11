@@ -7,7 +7,7 @@ export default function Projects() {
     {
       name: "NeuralAgri",
       logo: "https://www.dropbox.com/scl/fi/xlgyo976tdn8ion9gn21y/NA.png?rlkey=crwk9x8ud0fh2shvm1le7otmn&st=s6adz4uu&raw=1",
-      domain: "Full Stack + AI/ML + Android Development",
+      domain: "Full Stack | AI/ML | Android Development",
       date: "March 2025",
       summary: "AI-Powered Agricultural Advisory System",
       description:
@@ -15,14 +15,40 @@ export default function Projects() {
       links: { code: "https://github.com/anshul755/NeuralAgri" },
     },
     {
-      name: "SecurePay",
-      logo: "https://www.dropbox.com/scl/fi/920y4m32v7kymjkg5oy2e/SP.png?rlkey=x3wvmc6qjo6hac5uy8ckkbl2w&st=2dl9og29&raw=1",
-      domain: "Full Stack",
-      date: "May 2025",
-      summary: "Browser Extension for Seamless Blockchain Connectivity",
+      name: "Predictive Maintenance Using Sensor Data",
+      logo: "https://www.dropbox.com/scl/fi/rmryglr1lth1b2jc6fuz8/Screenshot-2025-12-29-161103.png?rlkey=adp3jksgdbrk1brfqw6k0dsx2&st=nz8xen3o&raw=1",
+      domain: "Python | Machine Learning",
+      date: "2024",
+      summary: "Machine Learning-Based RUL Prediction for NASA Turbofan Engines",
       description:
-        "Developed a cross-browser extension enabling React apps to connect seamlessly with Ethereum and Solana wallets. Implemented secure key management, multi-network support, and standardized APIs for effortless transaction signing. Built using React (Vite), Chrome Extension APIs, ethers.js, and solana/web3.js, focusing on minimal configuration and strong security practices.",
-      links: { code: "https://github.com/anshul755/SecurePay" },
+        "A machine learning project focused on predicting Remaining Useful Life (RUL) of NASA turbofan engines using sensor time-series data from the C-MAPSS dataset. The workflow includes data preprocessing, EDA, visualization, feature engineering, model training, and performance benchmarking across 7 regression models. Achieved best performance using XGBoost with RMSE 19.85 and R² 0.77, demonstrating its potential for real-world predictive maintenance applications.",
+      links: { code: "https://github.com/anshul755/Predictive-Maintenance-Using-Sensor-Data" },
+    },
+    {
+      name: "PageRank Visualizer",
+      logo: "https://www.dropbox.com/scl/fi/q643687zdjptg05qzyevo/Screenshot-2025-12-29-160037.png?rlkey=6mfl24cf3aovqdb3vp77l7874&st=v2acvl1q&raw=1",
+      domain: "Java Spring Boot | React",
+      date: "2025",
+      summary: "Interactive Visualization Tool for Google's PageRank Algorithm",
+      description:
+        "An interactive web-based tool that visualizes how Google's PageRank algorithm works. Users can build directed graphs, run PageRank iterations, and observe how importance distributes across nodes in real-time. The app supports dynamic graph creation, damping factor control, result animation, and exposes an API for PageRank computation. Ideal for students and developers exploring graph theory, search ranking, and algorithm behavior.",
+      links: { 
+        code: "https://github.com/anshul755/Page-Rank-Visualizer",
+        live: "https://page-rank-visualizer.vercel.app/"
+       },
+    },
+    {
+      name: "LuxeLodge",
+      logo: "https://www.dropbox.com/scl/fi/7lolkikgfu3o6scu8dzll/LuxeLodge.png?rlkey=uiyzn3dafsv0a9wkv2lmcmddv&st=4sw02m7f&raw=1",
+      domain: "Node.js | Express | MongoDB | EJS",
+      date: "April 2025",
+      summary: "Modern Lodge Management System",
+      description:
+        "Built a modern, full-stack lodge management system with secure user authentication, dynamic room listings, image uploads via Cloudinary, and a booking management dashboard. Server-rendered with EJS for smooth, SEO-friendly pages and Bootstrap for responsive design.",
+      links: {
+        code: "https://github.com/anshul755/LuxeLodge",
+        live: "https://luxelodge.onrender.com/"
+      },
     },
     {
       name: "SmartMusic",
@@ -33,29 +59,6 @@ export default function Projects() {
       description:
         "Developed an AI-powered music player that detects facial emotions and hand gestures to control playback using DeepFace, MediaPipe, and OpenCV. Integrated Streamlit for a user-friendly interface, allowing real-time webcam-based interaction. The system identifies moods like happiness, sadness, and anger, playing corresponding songs while enabling gesture-based playback control.",
       links: { code: "https://github.com/anshul755/Mood-and-Gesture-Activated-Smart-Music-System" },
-    },
-    {
-      name: "Skill Swap Platform",
-      logo: "https://www.dropbox.com/scl/fi/iaomids6s9q1fcfiwaicj/9353c3c0-6f35-4b0b-a8ac-a13f02c77715.png?rlkey=6c92rm2n4l87pmw9ogx2vs41t&st=kh00f0on&raw=1",
-      domain: "Full Stack (MERN)",
-      date: "June 2025",
-      summary: "Peer-to-Peer Skill Exchange Platform",
-      description:
-        "Developed a full-stack web platform for peer-to-peer skill exchange, featuring user authentication, user connection functionality, interactive dashboards, and responsive UI. Built with React, Node.js, Express, MongoDB.",
-      links: { code: "https://github.com/anshul755/Skill-Swap-Platform" },
-    },
-    {
-      name: "LuxeLodge",
-      logo: "https://www.dropbox.com/scl/fi/7lolkikgfu3o6scu8dzll/LuxeLodge.png?rlkey=uiyzn3dafsv0a9wkv2lmcmddv&st=4sw02m7f&raw=1",
-      domain: "Full Stack (Node.js, Express, MongoDB, EJS)",
-      date: "April 2025",
-      summary: "Modern Lodge Management System",
-      description:
-        "Built a modern, full-stack lodge management system with secure user authentication, dynamic room listings, image uploads via Cloudinary, and a booking management dashboard. Server-rendered with EJS for smooth, SEO-friendly pages and Bootstrap for responsive design.",
-      links: {
-        code: "https://github.com/anshul755/LuxeLodge",
-        live: "https://luxelodge.onrender.com/"
-      },
     },
     {
       name: "Library System",
@@ -96,7 +99,7 @@ export default function Projects() {
   };
 
   return (
-    <section id="project" className="py-16 px-4 sm:px-6 lg:px-8 bg-transparent">
+    <section id="project" className="scroll-mt-20 py-16 px-4 sm:px-6 lg:px-8 bg-transparent">
       <h2 className="sr-only">Projects</h2>
       <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {projects.map((proj, idx) => {

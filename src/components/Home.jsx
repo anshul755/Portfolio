@@ -1,7 +1,6 @@
 import React, { useRef, useEffect, useState } from "react";
 import { ChevronDown, Send } from "lucide-react";
 
-// Scroll-reveal hook
 function useReveal(threshold = 0.2) {
   const ref = useRef(null);
   const [revealed, setRevealed] = useState(false);
@@ -18,7 +17,6 @@ function useReveal(threshold = 0.2) {
   return [ref, revealed];
 }
 
-// Typing effect hook
 function useTypedWords(words, speed = 100, pause = 1200) {
   const [index, setIndex] = useState(0);
   const [typed, setTyped] = useState('');
@@ -69,7 +67,7 @@ export default function Home() {
   useEffect(() => {
     const interval = setInterval(() => {
       setBgIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 7000); // 7 seconds
+    }, 7000);
     return () => clearInterval(interval);
   }, []);
 
@@ -77,9 +75,8 @@ export default function Home() {
     <section
       id="home"
       ref={ref}
-      className={`relative min-h-screen w-full flex flex-col items-center justify-center px-4 text-white text-center transition-all duration-700 ease-out overflow-hidden ${
-        revealed ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-      }`}
+      className={`scroll-mt-20 relative min-h-screen w-full flex flex-col items-center justify-center px-4 text-white text-center transition-all duration-700 ease-out overflow-hidden ${revealed ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+        }`}
       style={{
         backgroundImage: `url(${images[bgIndex]})`,
         backgroundSize: "cover",
@@ -87,10 +84,8 @@ export default function Home() {
         transition: "background-image 1s ease-in-out"
       }}
     >
-      {/* Optional Overlay */}
       <div className="absolute inset-0 bg-black/50 z-0"></div>
 
-      {/* Intro Text */}
       <div className="max-w-5xl mx-auto z-10 relative">
         <h1 className="text-4xl md:text-6xl font-extrabold mb-6 tracking-tight leading-snug">
           Hi, I’m <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-yellow-300">Anshul Patel</span>
@@ -102,7 +97,6 @@ export default function Home() {
           Crafting immersive digital experiences and AI-powered tools. Driven by curiosity, built on code. Let’s build the future—together.
         </p>
 
-        {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
           <a
             href="#project"
@@ -120,7 +114,6 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Scroll Down Icon */}
       <div className="absolute bottom-10 animate-bounce text-orange-400 z-10">
         <a
           href={"#education"}

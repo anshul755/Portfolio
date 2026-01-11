@@ -34,20 +34,20 @@ export default function Contact() {
   };
 
   function useReveal(threshold = 0.2) {
-  const ref = useRef(null);
-  const [revealed, setRevealed] = useState(false);
+    const ref = useRef(null);
+    const [revealed, setRevealed] = useState(false);
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => setRevealed(entry.isIntersecting),
-      { threshold }
-    );
-    if (ref.current) observer.observe(ref.current);
-        return () => observer.disconnect();
+    useEffect(() => {
+      const observer = new IntersectionObserver(
+        ([entry]) => setRevealed(entry.isIntersecting),
+        { threshold }
+      );
+      if (ref.current) observer.observe(ref.current);
+      return () => observer.disconnect();
     }, [threshold]);
 
     return [ref, revealed];
-    }
+  }
 
   useEffect(() => {
     if (showPopup) {
@@ -60,7 +60,6 @@ export default function Contact() {
 
   return (
     <div className="relative w-full h-full overflow-hidden">
-      {/* Smooth Slide/Fade Popup (bottom-left) */}
       {showPopup && (
         <div
           className={`fixed bottom-5 left-5 flex items-center bg-green-500 text-white px-4 py-2 rounded-lg shadow-lg 
@@ -74,7 +73,7 @@ export default function Contact() {
       <section
         id="contact"
         ref={ref}
-        className={`w-full flex items-center justify-center px-4 py-16 transition-all duration-700 ease-out ${revealed ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
+        className={`scroll-mt-20 w-full flex items-center justify-center px-4 py-16 transition-all duration-700 ease-out ${revealed ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
       >
         <motion.div
           ref={containerRef}
@@ -83,7 +82,6 @@ export default function Contact() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="w-full max-w-6xl grid grid-cols-1 md:grid-cols-2 gap-10 bg-black/30 backdrop-blur-md p-8 md:p-12 rounded-2xl shadow-2xl border border-white/20 text-white"
         >
-          {/* Contact Form */}
           <div className="flex flex-col justify-center">
             <h2 className="text-3xl font-bold text-orange-400 mb-4">
               Let's Connect
@@ -134,9 +132,7 @@ export default function Contact() {
             </form>
           </div>
 
-          {/* Social & Platforms */}
           <div className="flex flex-col justify-center gap-8">
-            {/* Social Links */}
             <div>
               <h3 className="text-2xl font-semibold text-orange-400 mb-3">
                 Find me on
@@ -160,8 +156,6 @@ export default function Contact() {
                 </a>
               </div>
             </div>
-
-            {/* Competitive Platforms */}
             <div>
               <h3 className="text-2xl font-semibold text-orange-400 mb-3">
                 Competitive Platforms
@@ -196,7 +190,6 @@ export default function Contact() {
               </div>
             </div>
 
-            {/* Email Address */}
             <div className="flex items-center gap-2 text-sm">
               <Mail className="w-4 h-4" />
               <span>anshulpatel2023@gmail.com</span>

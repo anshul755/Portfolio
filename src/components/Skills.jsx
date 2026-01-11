@@ -34,14 +34,14 @@ export default function Skills() {
   };
 
   return (
-    <section id="skills" className="min-h-screen flex items-center justify-center px-6 py-16 overflow-hidden">
+    <section id="skills" className="scroll-mt-20 min-h-screen flex items-center justify-center px-6 py-16 overflow-hidden">
       <motion.div
         variants={containerVariants}
         initial="hidden"
         animate="visible"
         className="w-full max-w-6xl bg-white/5 dark:bg-gray-900/10 backdrop-blur-lg rounded-2xl p-8 shadow-xl border border-white/10"
       >
-        
+
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-8">
           {skills.map((skill) => {
             const controls = useAnimation();
